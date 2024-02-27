@@ -19,6 +19,13 @@
 	<dependencies>
 
 		<dependency>
+			<groupId>com.queue-it.connector</groupId>
+			<artifactId>jakarta</artifactId>
+			<version>4.0.13</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
@@ -55,6 +62,8 @@
     		<version>1.18.30</version>
     		<scope>provided</scope>
 		</dependency>
+
+
 
 
 	</dependencies>
