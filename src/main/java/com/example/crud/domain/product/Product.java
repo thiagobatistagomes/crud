@@ -1,5 +1,7 @@
 package com.example.crud.domain.product;
 
+import org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,5 +23,10 @@ import lombok.Setter;
 public class Product {
     @Id @GeneratedValue(strategy = GenerationType.UUID) private String id;
     private String name;
-    private Number price_in_cents;
+    private Integer price_in_cents;
+
+    public Product(RequestProduct requestProduct) {
+        this.name = requestProduct.name();
+        this.price_in_cents = requestProduct.price_in_cents();
+    }
 }

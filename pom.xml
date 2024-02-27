@@ -18,11 +18,13 @@
 	</properties>
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 		<dependency>
-			<groupId>com.queue-it.connector</groupId>
-			<artifactId>jakarta</artifactId>
-			<version>4.0.13</version>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.1.0-M1</version>
 		</dependency>
+
 
 
 		<dependency>

@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.crud.domain.product.Product;
 import com.example.crud.domain.product.ProductRepository;
+import com.example.crud.domain.product.RequestProduct;
+
 import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/product")
@@ -23,8 +27,10 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity registerProduct(@RequestBody @Valid) {
-
+    public ResponseEntity registerProduct(@RequestBody @Valid RequestProduct data) {
+        Product newProduct = new Product(data);
+        repository.save(newProduct);
+        return ResponseEntity.ok().build();
     }
 }
 
